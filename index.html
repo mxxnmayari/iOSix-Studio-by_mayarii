@@ -19,16 +19,34 @@ main{max-width:1240px;margin:auto;padding:0 24px 70px}.hero{margin:28px 0 22px;b
 dialog{border:1px solid var(--line);padding:0;width:min(560px,calc(100% - 28px));color:var(--ink);background:#fffdf9;box-shadow:0 20px 70px #28153e40}dialog::backdrop{background:#21153175}.modal-head{padding:20px 22px;background:#f1ebf8;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}.modal-head h2{font:400 25px Georgia,serif;margin:0}.modal-body{padding:22px;font-size:13px;line-height:1.65}.modal-body h3{font:400 17px Georgia,serif;margin:15px 0 3px}.modal-close{border:0;background:transparent;font-size:23px;color:var(--ink)}.project-list{display:grid;gap:9px}.project-item{display:flex;justify-content:space-between;gap:12px;align-items:center;border:1px solid var(--line);padding:12px;background:#fff}.project-item strong{font:400 16px Georgia,serif}.project-item small{display:block;color:var(--muted);margin-top:4px}.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);z-index:1200;background:var(--ink);color:#fff;padding:12px 16px;font-size:12px;box-shadow:var(--shadow);max-width:calc(100% - 24px);text-align:center}
 @media(max-width:900px){.tool-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.workspace-body{grid-template-columns:1fr}.controls{border-right:0;border-bottom:1px solid var(--line)}.device{width:min(100%,330px)}}
 @media(max-width:560px){.header-inner{padding:12px 15px;align-items:flex-start}.brand img{width:165px;max-height:50px;flex-basis:165px}.nav{max-width:48%}.nav button{font-size:9px;padding:7px 5px}main{padding:0 13px 45px}.hero{margin-top:15px;padding:34px 18px;min-height:250px}.hero:before{font-size:28px}.hero:after{font-size:30px}.hero p{font-size:14px}.section-head{align-items:flex-start;flex-direction:column}.tool-grid{gap:8px}.tool-card{padding:14px;min-height:137px}.tool-card h3{font-size:17px}.workspace-top{padding:16px}.workspace-top h2{font-size:24px}.controls{padding:17px}.preview-area{padding:14px 6px}.device{transform-origin:top center}.intro-panel{min-height:390px;padding:25px 18px}.logo{width:min(340px,100%)}.footer{flex-direction:column}.workspace-actions{width:100%}}
+
+/* Intro refinements: soft, playful pastel gradient and a tighter centered group */
+#intro{
+  background:
+    radial-gradient(ellipse at 18% 18%, #fff9f4 0%, transparent 34%),
+    radial-gradient(ellipse at 82% 24%, #d9efff 0%, transparent 34%),
+    radial-gradient(ellipse at 78% 82%, #fff7a8 0%, transparent 32%),
+    radial-gradient(ellipse at 20% 84%, #e3d4ff 0%, transparent 38%),
+    linear-gradient(135deg,#cbb8ec 0%,#bca6e4 24%,#fff5a0 49%,#fffbd8 64%,#b8dced 82%,#8eb4dc 100%);
+}
+.intro-panel{min-height:0;gap:0;padding:30px 28px 32px;border-radius:8px;background:rgba(255,253,249,.88);backdrop-filter:blur(8px)}
+.logo{margin-bottom:13px;width:min(390px,100%)}
+.intro-kicker{max-width:390px;margin:0 0 18px;font-size:10px;line-height:1.7;letter-spacing:.16em;color:#4d3271}
+.enter-btn{margin:0}
+@media(max-width:600px){
+  #intro{padding:18px}
+  .intro-panel{padding:26px 19px 28px}
+  .logo{width:min(340px,100%);margin-bottom:11px}
+  .intro-kicker{font-size:9px;letter-spacing:.12em;margin-bottom:16px}
+}
 </style>
 </head>
 <body>
 <section id="intro" aria-label="Welcome to iOSix Studio">
   <div class="intro-panel">
     <img class="logo" id="introLogo" alt="iOSix Studio by Mayarii">
-    <p class="intro-kicker">A creative toolkit for alternate universes</p>
+    <p class="intro-kicker">A CREATIVE TOOLKIT FOR ALTERNATE UNIVERSES STORIES</p>
     <button class="enter-btn" id="enterBtn">Enter iOSix Studio <span aria-hidden="true">→</span></button>
-    <p class="intro-note">A little nostalgia, a lot of imagination.</p>
-    <div class="intro-credit">@BY_MAYARII</div>
   </div>
 </section>
 <div id="app" class="hidden">
